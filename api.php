@@ -3,6 +3,7 @@
 header("Content-Type:application/json");
 include('connection.php');
 
+
 if (isset($_GET['customer_id']) && $_GET['customer_id']!="") {
 
 	$customer_id = $_GET['customer_id'];
@@ -16,6 +17,10 @@ if (isset($_GET['customer_id']) && $_GET['customer_id']!="") {
 	$customerData['customer_contact'] = $row['customer_contact'];
 	$customerData['customer_address'] = $row['customer_address'];
 	$customerData['country'] = $row['country'];
+	$customerData['phone'] = $row['phone'];
+	$customerData['id_card'] = $row['id_card'];
+	$customerData['remark'] = $row['remark'];
+	$customerData['note'] = $row['note'];
 
 
 	$response["status"] = "true";
@@ -28,6 +33,7 @@ if (isset($_GET['customer_id']) && $_GET['customer_id']!="") {
 	$response["status"] = "false";
 	$response["message"] = "No customer(s) found!";
 }
+
 echo json_encode($response); exit;
 
 ?>

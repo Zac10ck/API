@@ -1,2 +1,4 @@
 RewriteEngine On
-RewriteRule ^api/([0-9a-zA-Z_-]*)$ api.php?customer_id=$1 [NC,L]
+RewriteRule ^api/([0-9a-zA-Z_-]*)$ api.php?customer_id=$1 [NC,L]    
+
+RewriteRule ^api_login/([0-9a-zA-Z_-]*)$ api_login.php?id=$1 [NC,L]    
