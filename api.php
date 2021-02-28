@@ -22,6 +22,8 @@ if (isset($_GET['customer_id']) && $_GET['customer_id']!="") {
 	$response["message"] = "Customer Details";
 	$response["customers"] = $customerData;
 
+
+
 } else {
 	$response["status"] = "false";
 	$response["message"] = "No customer(s) found!";
