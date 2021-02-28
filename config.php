@@ -1,4 +1,12 @@
 <?php
-$config = parse_ini_file('/Users/admin/Sites/to-do.ini');
-$conn = mysqli_connect($config['dbhost'], $config['username'], $config['password']);
-mysqli_select_db($conn, $config['db']);
+// config/config.php
+
+$configuration = [
+    'database' => [
+        'hostname' => 'localhost',
+        'port'     => 3306
+        'name'     => 'my_to_do_db',
+        'username' => 'root',
+        'password' => 'medteam2013',
+    ]
+];
