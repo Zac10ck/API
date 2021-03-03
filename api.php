@@ -16,7 +16,6 @@ if (isset($_GET['customer_id']) && $_GET['customer_id']!="") {
 	$customerData['customer_contact'] = $row['customer_contact'];
 	$customerData['customer_address'] = $row['customer_address'];
 	$customerData['country'] = $row['country'];
-array_combine
 
 	$response["status"] = "true";
 	$response["message"] = "Customer Details";
